@@ -1,6 +1,7 @@
 # Boggle
 
 ##Introduction
+
 This is a backend code of game [Boggle](https://en.wikipedia.org/wiki/Boggle).<br/>
 There are 3 methods included: [`POST`](#POST), [`PUT`](#PUT), and [`GET`](#GET):<br/>
 - [`POST`](#POST): This method is used when system calls to create a new game, a `json`
@@ -12,12 +13,14 @@ a valid answer and update the game accordingly.<br/>
 
 ## Functionality
 ###Global variable
+
 - `game_data_key_id`: hash map to store game with key is id
 - `game_data_key_token`: hash map to store game with key is token
 - `test_board`: default board that is get from `test_board.txt`
 - `dictionary`: set of all allowed words to play, get from `dictionary.txt`
 
 ###POST
+
 - Parameters:
   + `duration` (required): the time (in seconds) that specifies the duration of
     the game
@@ -42,6 +45,7 @@ description above. A `game` json object is then created with attributes:
 - Game is added to 2 hash maps. Finally, a response status `201` is created. 
 
 ###PUT
+
 - Parameters:
   + `id` (required): The ID of the game
   + `token` (required): The token for authenticating the game
@@ -58,6 +62,7 @@ to `receive_word` function
         `200` response
         
 ###GET
+
 - Parameters:
   + `id` (required): The ID of the game
 - `interact_with_game` function is generated under method `GET`.

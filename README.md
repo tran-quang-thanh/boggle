@@ -14,10 +14,10 @@ a valid answer and update the game accordingly.<br/>
 ## Functionality
 ### Global variable
 
-- `game_data_key_id`: hash map to store game with key is id
-- `game_data_key_token`: hash map to store game with key is token
-- `test_board`: default board that is get from `test_board.txt`
-- `dictionary`: set of all allowed words to play, get from `dictionary.txt`
+`game_data_key_id`: hash map to store game with key is id<br/>
+`game_data_key_token`: hash map to store game with key is token<br/>
+`test_board`: default board that is get from `test_board.txt`<br/>
+`dictionary`: set of all allowed words to play, get from `dictionary.txt`<br/>
 
 ### POST
 

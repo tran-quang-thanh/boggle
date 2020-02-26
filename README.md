@@ -14,10 +14,10 @@ a valid answer and update the game accordingly.<br/>
 ## Functionality
 ### Global variable
 
-`game_data_key_id`: hash map to store game with key is id<br/>
-`game_data_key_token`: hash map to store game with key is token<br/>
-`test_board`: default board that is get from `test_board.txt`<br/>
-`dictionary`: set of all allowed words to play, get from `dictionary.txt`<br/>
+- `game_data_key_id`: hash map to store game with key is id<br/>
+- `game_data_key_token`: hash map to store game with key is token<br/>
+- `test_board`: default board that is get from `test_board.txt`<br/>
+- `dictionary`: set of all allowed words to play, get from `dictionary.txt`<br/>
 
 ### POST
 
@@ -55,8 +55,8 @@ It first checks `id` and `token`. If either of these violates the data in one
 of the hashmaps, a `400` status is returned, else `word` is called then passed
 to `receive_word` function
 - `receive_word` receives `word` and `game` as inputs:
-    + `word` isn't in [`dictionary`](#dictionary): return `400` response
-    + `word` is in [`dictionary`](#dictionary): `time_left` is updated:
+    + `word` isn't in `dictionary:` return `400` response
+    + `word` is in `dictionary`: `time_left` is updated:
         - `time_left` < 0: return `400` response
         - `time_left` > 0: increases point by 3 and return updated game with
         `200` response
@@ -66,5 +66,5 @@ to `receive_word` function
 - Parameters:
   + `id` (required): The ID of the game
 - `interact_with_game` function is generated under method `GET`.
-If `id` isn't in [`game_data_key_id`](#game_data_key_id): return `404` response,
+If `id` isn't in `game_data_key_id`: return `404` response,
 else return game with `200` response

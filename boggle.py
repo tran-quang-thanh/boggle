@@ -90,8 +90,8 @@ def receive_word(game, word):
         game['time_left'] -= (int(time.time()) - game['timestamp'])
         if game['time_left'] >= 0:
             game['points'] += 3
+            return game
         else:
             return {'message': "You have run out of time"}
     else:
         return {'message': "This word doesn't exist"}
-    return game

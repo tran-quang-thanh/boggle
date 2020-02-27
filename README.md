@@ -55,7 +55,7 @@ It first checks `id` and `token`. If either of these violates the data in one
 of the hashmaps, a `400` status is returned, else `word` is called then passed
 to `receive_word` function
 - `receive_word` receives `word` and `game` as inputs:
-    + `word` isn't in `dictionary:` return `400` response
+    + `word` isn't in `dictionary` or `board`: return `400` response
     + `word` is in `dictionary`: `time_left` is updated:
         - `time_left` < 0: return `400` response
         - `time_left` > 0: increases point by 3 and return updated game with
